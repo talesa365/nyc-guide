@@ -23,5 +23,5 @@ def favicon(request):
 urlpatterns = [
     path('favicon.ico', favicon), # added to stop favicon error
     path('admin/', admin.site.urls),
-    path('', include('nyc.urls'))
+    path('nyc/', include('nyc.urls'))
 ]
