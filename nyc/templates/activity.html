@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>{% load static %}
+        <img src="{% static 'nyc.jpeg' %}">
+   
+<link rel="stylesheet" href="{% static '/nyc/static/style.css' %}">
+</head>
+
+<body id="home">
+<h1>New York City Guide</h1>
+<p>
+  
+</p>
+
+<ul>
+    {% for borough in boroughs %}
+    <li><a href="{% url 'borough' borough %}">{{ borough|title }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
